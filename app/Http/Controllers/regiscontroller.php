@@ -17,13 +17,6 @@ class regiscontroller extends Controller
     }
     public function store(Request $request)
     {
-    //    $validateData= $request->validate([
-    //     'nama'=>'required | maz:255',
-    //     'email'=>'required | email:dns|unique:users',
-    //     'password'=>'required | min:5|max:255'
-    //    ]);
-
-    //    dd('berhasil');
     $validateData = $request->validate([
         'name' => 'required|max:255',
         'email' => 'required|email:dns',

@@ -15,16 +15,18 @@ class logincontroller extends Controller
         ]);
     }
     // ini yang di ubah
+
+
     public function authenticate(Request $request){
 
         $credentials = $request->validate([
             'email' => 'required|email:dns',
-            'pass' => 'required'
+            'password' => 'required|min:8|max:16'
         ]);
 
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            return redirect()->intended('dasboard');
+            return redirect()->intended('dashboard');
         }
         return back()->with('loginError', 'Login Failed!');
     }
@@ -36,6 +38,6 @@ class logincontroller extends Controller
     
         request()->session()->regenerateToken();
     
-        return redirect('/');
+        return redirect('login');
     }
 }

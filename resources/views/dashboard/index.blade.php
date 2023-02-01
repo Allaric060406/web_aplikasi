@@ -68,13 +68,13 @@
         </nav>
 
         <h2 class="mb-4">Pemesanan</h2>
-        <form action="">
+        <form action="#">
         <div class="lg-6">
                         <div class="card">
                             <div class="card-header"><strong>Isi Form dibawah</strong></div>
                             <div class="card-body card-block">
                             <div class="col-10">
-                                <div class="form-group"><label for="company" class=" form-control-label">Nama Pemesan</label><input type="text" id="company" placeholder="nama" class="form-control"></div>
+                                <div class="form-group"><label for="company" class=" form-control-label">Nama Pemesan</label><input type="text" id="company" placeholder="Nama" class="form-control"></div>
                             </div>
                             <div class="col-10">
                                 <div class="form-group"><label for="vat" class=" form-control-label">Nama Driver</label><input type="text" id="vat" placeholder="Wajib di isi" class="form-control"></div>
@@ -85,8 +85,15 @@
                             <div class="col-10">
                             <div class="form-group"><label for="street" class=" form-control-label"><Table>Jenis Kendaraan</Table></label><input type="text" id="street" placeholder=" Wajib di isi" class="form-control"></div>
                             </div>
-                            <div class="col-10">
-                            <div class="form-group"><label for="street" class=" form-control-label"><Table>Tanggal</Table></label><input type="date" id="street" placeholder="Wajib di isi" class="form-control"></div>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-5">
+                                  <div class="form-group"><label for="street" class=" form-control-label"><Table>Tanggal Berangkat</Table></label><input type="date" id="street" placeholder="Wajib di isi" class="form-control"></div>
+                                </div>
+                                <div class="col-5">
+                                  <div class="form-group"><label for="street" class=" form-control-label"><Table>Tanggal Pulang</Table></label><input type="date" id="street" placeholder="Wajib di isi" class="form-control"></div>
+                                </div>
+                              </div>
                             </div>
                                 <div class="txt">
                                 <button type="submit" class="btn btn-primary btn-sm">

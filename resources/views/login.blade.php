@@ -42,17 +42,29 @@
                             <i class="zmdi zmdi-font"></i>
                         </span>
 
+                        @if(session()->has('loginError'))
+                            <div class="alert alert-danger alert-dismissble fade show" role="alert">
+                                {{session('loginError')}}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"arial-label="close"></button>
+                            </div>
 
+                        @endif
                         <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-                            <input class="input100 @error('email') is-invalid @enderror" type="text" name="email" autofocus  >
+                            <input class="input100 @error('email') is-invalid @enderror" type="text" name="email" autofocus required value="{{old('email')}}">
                             <span class="focus-input100" data-placeholder="Email"></span>
+
+                            @error('email')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                            @enderror
                         </div>
 
                         <div class="wrap-input100 validate-input" data-validate="Enter password">
                             <span class="btn-show-pass">
                                 <i class="zmdi zmdi-eye"></i>
                             </span>
-                            <input class="input100" type="password" name="pass">
+                            <input class="input100" type="password" name="password">
                             <span class="focus-input100" data-placeholder="Password"></span>
                         </div>
 

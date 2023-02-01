@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
 use App\Http\Controllers\regiscontroller;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,11 @@ Route::get('/sidebar', function () {
 // logincontroler
 Route ::get ('login',[logincontroller::class,'login']);
 Route::post('/login', [logincontroller::class, 'authenticate']);
+
 // regiscontroler
 Route :: get ('/register',[regiscontroller::class,'regis']);
 Route :: post ('/register',[regiscontroller::class,'store']);
+
+// 
+Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 

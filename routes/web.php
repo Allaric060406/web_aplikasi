@@ -22,6 +22,7 @@ Route::get('/sidebar', function () {
 // logincontroler
 Route ::get ('login',[logincontroller::class,'login']);
 Route::post('/login', [logincontroller::class, 'authenticate']);
+Route::post('/logout', [logincontroller::class, 'logout']);
 
 // regiscontroler
 Route :: get ('/register',[regiscontroller::class,'regis']);
